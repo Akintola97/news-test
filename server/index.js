@@ -3,8 +3,7 @@ const app = express();
 require('dotenv').config();
 const cors = require('cors');
 const bodyParser = require('body-parser')
-const port = process.env.PORT || 5000;
-const hostName = 'localhost'
+const port = process.env.PORT || 10000;
 const hero_page = require('./routes/Hero')
 const business_route = require('./routes/Business')
 const science_route = require('./routes/Science')
@@ -32,6 +31,6 @@ app.use('/search', search_route);
 
 
 
-app.listen(port, hostName, ()=>{
-    console.log(`The server is running on ${hostName}${port}`)
+app.listen(port, ()=>{
+    console.log(`The server is running on ${port}`)
 })

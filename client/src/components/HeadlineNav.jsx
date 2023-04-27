@@ -45,7 +45,7 @@ const HeadlineNav = () => {
 
   useEffect(()=>{
     const fetchData = async() =>{
-      const businessData = await axios.get('http://localhost:5000/business');
+      const businessData = await axios.get('https://news-api-t51q.onrender.com/business');
       setBusinessInfo(businessData.data.articles)
     }
 
@@ -59,7 +59,7 @@ const HeadlineNav = () => {
 
   useEffect(()=>{
     const fetchData = async() =>{
-      const sportsData = await axios.get('http://localhost:5000/sports')
+      const sportsData = await axios.get('https://news-api-t51q.onrender.com/sports')
       setSportsInfo(sportsData.data.articles)
     }
     fetchData();
@@ -69,7 +69,7 @@ const HeadlineNav = () => {
 
   useEffect(()=>{
     const fetchData = async() =>{
-      const scienceData = await axios.get('http://localhost:5000/science')
+      const scienceData = await axios.get('https://news-api-t51q.onrender.com/science')
       setScienceInfo(scienceData.data.articles)
     }
 

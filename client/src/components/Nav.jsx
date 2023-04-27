@@ -18,7 +18,7 @@ const Nav = () => {
 
 
 try {
-    const search_data = await axios.post('http://localhost:5000/search', {search})
+    const search_data = await axios.post('https://news-api-t51q.onrender.com/search', {search})
    navigate('/search', {state: {data: search_data.data}})
 
 
