@@ -33,7 +33,7 @@ try {
 
   return (
     <div className='bg-black w-full h-[7vh] flex justify-between items-center sticky top-0 z-50'>
-      <Link to = {'/'}><h1 className='text-white p-5 font-bold'>NEWS</h1></Link>
+      <Link to = {'/news'}><h1 className='text-white p-5 font-bold'>NEWS</h1></Link>
         <div>
             <form className='p-3' onSubmit={handleSubmit}>
                 <input className='bg-transparent focus:outline-none border-b text-white cursor-pointer' type = 'text' placeholder='Search...'
