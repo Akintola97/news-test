@@ -7,7 +7,7 @@ const api_key = process.env.api_key
 
 science_route.get('/', async(req, res)=>{
     try {
-        const science_data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&catergory=science&pageSize=21&apiKey=${api_key}`)
+        const science_data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=science&pageSize=21&apiKey=${api_key}`)
         res.send(science_data.data)
     } catch (error) {
         console.log(error)
