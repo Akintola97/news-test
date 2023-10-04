@@ -18,7 +18,8 @@ const Nav = () => {
         `${backendUrl}/search`,
         { search }
       );
-      navigate("/search", { state: { data: search_data.data } });
+      const searchResults = search_data.data.articles
+      navigate("/search", { state: { data: searchResults } });
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +27,7 @@ const Nav = () => {
 
   return (
     <div className="bg-black w-full h-[7vh] flex justify-between items-center sticky top-0 z-50">
-      <Link to={"/news"}>
+      <Link to={"/"}>
         <h1 className="text-white p-5 font-bold">NEWS</h1>
       </Link>
       <div>
