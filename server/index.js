@@ -9,6 +9,7 @@ const business_route = require('./routes/Business')
 const science_route = require('./routes/Science')
 const sports_route = require('./routes/Sports')
 const search_route = require('./routes/Search')
+const path = require('path');
 
 
 
@@ -29,7 +30,10 @@ app.use('/search', search_route);
 
 
 
-
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+});
 
 app.listen(port, ()=>{
     console.log(`The server is running on ${port}`)
