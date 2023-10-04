@@ -15,7 +15,7 @@ const Hero = () => {
 
     const fetchData = async() =>{
         try {
-            const hero_data = await axios.get('https://news-api-t51q.onrender.com')
+            const hero_data = await axios.get('https://news-api-t51q.onrender.com/hero')
             setHeroInfo(hero_data.data.articles[Math.floor(Math.random() * hero_data.data.articles.length-1)])
         } catch (error) {
             console.log(error)
