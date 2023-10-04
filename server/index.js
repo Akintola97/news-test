@@ -14,7 +14,7 @@ const sports_route = require('./routes/Sports')
 const search_route = require('./routes/Search')
 
 
-app.use(cors({origin: "https://news.boltluna.io"}));
+app.use(cors({origin: "https://news-search-app.onrender.com."}));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 

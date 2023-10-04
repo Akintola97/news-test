@@ -1,3 +1,3 @@
-const backendUrl = "https://news.boltluna.io";
+const backendUrl = "https://news-search-app.onrender.com";
 
 export default backendUrl
