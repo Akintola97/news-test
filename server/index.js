@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 
 
-app.use('/hero', hero_page);
+app.use('/', hero_page);
 app.use('/business', business_route);
 app.use('/science', science_route);
 app.use('/sports', sports_route);
