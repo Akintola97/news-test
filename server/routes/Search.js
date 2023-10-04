@@ -2,7 +2,7 @@ const express = require('express');
 const search_route = express.Router();
 const axios = require('axios');
 require('dotenv').config();
-const api_key = process.env.api_key
+const api_key = process.env.API_KEY;
 
 
 search_route.post('/', async (req, res)=>{
