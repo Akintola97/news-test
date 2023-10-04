@@ -15,7 +15,7 @@ const Nav = () => {
 
     try {
       const search_data = await axios.post(
-        `${backendUrl}/search`,
+        `${backendUrl}/headline/search`,
         { search }
       );
       const searchResults = search_data.data.articles

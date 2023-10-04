@@ -45,7 +45,7 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       const businessData = await axios.get(
-        `${backendUrl}/business`
+        `${backendUrl}/headline/business`
       );
       setBusinessInfo(businessData.data.articles);
     };
