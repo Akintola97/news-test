@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const cors = require('cors');
-const bodyParser = require('body-parser')
 const port = process.env.PORT || 10000;
+const bodyParser = require('body-parser')
 const hero_page = require('./routes/Hero')
 const business_route = require('./routes/Business')
 const science_route = require('./routes/Science')
