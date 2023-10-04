@@ -1,7 +1,7 @@
 const express = require('express');
 const sports_route = express.Router();
-const axios = require('axios');
 require('dotenv').config();
+const axios = require('axios');
 const api_key = process.env.API_KEY;
 
 
