@@ -44,12 +44,15 @@ const HeadlineNav = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const businessData = await axios.get(
-        `${backendUrl}/headline/business`
-      );
-      setBusinessInfo(businessData.data.articles);
+      try {
+        const businessData = await axios.get(
+          `${backendUrl}/headline/business`
+        );
+        setBusinessInfo(businessData.data.articles);
+      } catch (error) {
+        console.log(error)
+      }
     };
-
     fetchData();
   }, []);
 
@@ -57,10 +60,14 @@ const HeadlineNav = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const sportsData = await axios.get(
-        `${backendUrl}/sports`
-      );
-      setSportsInfo(sportsData.data.articles);
+      try {
+        const sportsData = await axios.get(
+          `${backendUrl}/sports`
+        );
+        setSportsInfo(sportsData.data.articles);
+      } catch (error) {
+        console.log(error)
+      }
     };
     fetchData();
   }, []);
@@ -69,12 +76,15 @@ const HeadlineNav = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const scienceData = await axios.get(
-        `${backendUrl}/science`
-      );
-      setScienceInfo(scienceData.data.articles);
+      try {
+        const scienceData = await axios.get(
+          `${backendUrl}/science`
+        );
+        setScienceInfo(scienceData.data.articles);
+      } catch (error) {
+        console.log(error)
+      }
     };
-
     fetchData();
   }, []);
 
