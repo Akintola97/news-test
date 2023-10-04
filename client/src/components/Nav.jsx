@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
+import backendUrl from "../config";
 
 const Nav = () => {
   const [search, setSearch] = useState("");
