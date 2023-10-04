@@ -14,7 +14,7 @@ const Nav = () => {
 
     try {
       const search_data = await axios.post(
-        "https://news-api-t51q.onrender.com/search",
+        `${backendUrl}/search`,
         { search }
       );
       navigate("/search", { state: { data: search_data.data } });

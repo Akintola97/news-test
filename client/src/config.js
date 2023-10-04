@@ -1,3 +1,3 @@
-// const backendUrl = "https://marvel.boltluna.io";
+const backendUrl = "https://marvel.boltluna.io";
 
 export default backendUrl

@@ -10,6 +10,7 @@ import axios from "axios";
 import Business from "./Business";
 import Sports from "./Sports";
 import Science from "./Science";
+import backendUrl from "../config";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,7 +45,7 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       const businessData = await axios.get(
-        "https://news-api-t51q.onrender.com/business"
+        `${backendUrl}/business`
       );
       setBusinessInfo(businessData.data.articles);
     };
@@ -57,7 +58,7 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       const sportsData = await axios.get(
-        "https://news-api-t51q.onrender.com/sports"
+        `${backendUrl}/sports`
       );
       setSportsInfo(sportsData.data.articles);
     };
@@ -69,7 +70,7 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       const scienceData = await axios.get(
-        "https://news-api-t51q.onrender.com/science"
+        `${backendUrl}/science`
       );
       setScienceInfo(scienceData.data.articles);
     };
