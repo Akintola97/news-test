@@ -1,4 +1,3 @@
-const express = require('express');
 const axios = require('axios');
 require('dotenv').config();
 const apikey = process.env.API_KEY
