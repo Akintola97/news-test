@@ -1,3 +1,3 @@
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://news-search-app.onrender.com";
 
 export default backendUrl
