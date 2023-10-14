@@ -45,14 +45,15 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const businessData = await axios.get(
-          `${backendUrl}/headline/business`
-        );
-        setBusinessInfo(businessData.data.articles);
+        // Delay the API call by 5 seconds
+
+        const businessData = await axios.get(`${backendUrl}/headline/business`);
+        setBusinessInfo(businessData.data.results);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     };
+
     fetchData();
   }, []);
 
@@ -61,14 +62,15 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const sportsData = await axios.get(
-          `${backendUrl}/sports`
-        );
-        setSportsInfo(sportsData.data.articles);
+        // Delay the API call by 5 seconds
+
+        const sportsData = await axios.get(`${backendUrl}/headline/sports`);
+        setSportsInfo(sportsData.data.results);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     };
+
     fetchData();
   }, []);
 
@@ -77,14 +79,15 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const scienceData = await axios.get(
-          `${backendUrl}/science`
-        );
-        setScienceInfo(scienceData.data.articles);
+        // Delay the API call by 5 seconds
+
+        const scienceData = await axios.get(`${backendUrl}/headline/science`);
+        setScienceInfo(scienceData.data.results);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     };
+
     fetchData();
   }, []);
 

@@ -12,7 +12,7 @@ const route = require('./routes/routes')
 
 
 
-app.use(cors({origin: "https://news-search-app.onrender.com"}));
+app.use(cors({origin: "http://localhost:3000"}));
 app.use(express.json());
 
 

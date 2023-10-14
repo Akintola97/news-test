@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -14,11 +13,8 @@ const Nav = () => {
     setSearch("");
 
     try {
-      const search_data = await axios.post(
-        `${backendUrl}/headline/search`,
-        { search }
-      );
-      const searchResults = search_data.data.articles
+      const search_data = await axios.post(`${backendUrl}/headline/search`, { search });
+      const searchResults = search_data.data.results; 
       navigate("/search", { state: { data: searchResults } });
     } catch (error) {
       console.log(error);
@@ -40,7 +36,6 @@ const Nav = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
           <button className="text-white bg-green-500 rounded-md p-1.5">
-            {" "}
             <AiOutlineSearch className="text-[2.0vmin]" />
           </button>
         </form>

@@ -7,7 +7,7 @@ const axios = require('axios');
 exports.hero_page = async(req, res) =>{
     try {
         const hero_data = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&pageSize=21&apiKey=${api_key}`
+          ` https://newsdata.io/api/1/news?apikey=${api_key}&language=en&image=1`
         );
         res.send(hero_data.data);
       } catch (error) {
@@ -17,7 +17,7 @@ exports.hero_page = async(req, res) =>{
 exports.business = async(req, res) =>{
    try {
     const business_data = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=us&category=business&pageSize=21&apiKey=${api_key}`
+      `https://newsdata.io/api/1/news?apikey=${api_key}&category=business&language=en&image=1`
     );
     res.send(business_data.data);
   } catch (error) {
@@ -27,7 +27,7 @@ exports.business = async(req, res) =>{
 exports.science = async(req, res) =>{
     try {
         const science_data = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&category=science&pageSize=21&apiKey=${api_key}`
+          `https://newsdata.io/api/1/news?apikey=${api_key}&category=science&language=en&image=1`
         );
         res.send(science_data.data);
       } catch (error) {
@@ -37,7 +37,7 @@ exports.science = async(req, res) =>{
 exports.sports = async(req, res) =>{
     try {
         const sports_data = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&category=sports&pageSize=21&apiKey=${api_key}`
+          `https://newsdata.io/api/1/news?apikey=${api_key}&category=sports&language=en&image=1`
         );
         res.send(sports_data.data);
       } catch (error) {
@@ -45,11 +45,12 @@ exports.sports = async(req, res) =>{
       }
 }
 exports.search = async(req, res) =>{
+  const { search } = req.body;
     try {
-        const sports_data = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&category=sports&pageSize=21&apiKey=${api_key}`
+        const search_data = await axios.get(
+          `https://newsdata.io/api/1/news?apikey=${api_key}&qInTitle=${search}&language=en&image=1`
         );
-        res.send(sports_data.data);
+        res.send(search_data.data);
       } catch (error) {
         console.log(error);
       }
