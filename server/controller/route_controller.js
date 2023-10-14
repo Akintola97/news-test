@@ -1,13 +1,13 @@
 const express = require('express');
-const api_key = process.env.API_KEY
 const axios = require('axios');
+const apikey = process.env.API_KEY
 
 
 
 exports.hero_page = async(req, res) =>{
     try {
         const hero_data = await axios.get(
-          ` https://newsdata.io/api/1/news?apikey=pub_30957d309d53a07c8d8685bf3e63c02bed4a2&language=en&image=1`
+          ` https://newsdata.io/api/1/news?apikey=${apikey}&language=en&image=1`
         );
         res.send(hero_data.data);
       } catch (error) {
@@ -17,7 +17,7 @@ exports.hero_page = async(req, res) =>{
 exports.business = async(req, res) =>{
    try {
     const business_data = await axios.get(
-      `https://newsdata.io/api/1/news?apikey=pub_30957d309d53a07c8d8685bf3e63c02bed4a2&category=business&language=en&image=1`
+      `https://newsdata.io/api/1/news?apikey=${apikey}&category=business&language=en&image=1`
     );
     res.send(business_data.data);
   } catch (error) {
@@ -27,7 +27,7 @@ exports.business = async(req, res) =>{
 exports.science = async(req, res) =>{
     try {
         const science_data = await axios.get(
-          `https://newsdata.io/api/1/news?apikey=pub_30957d309d53a07c8d8685bf3e63c02bed4a2&category=science&language=en&image=1`
+          `https://newsdata.io/api/1/news?apikey=${apikey}&category=science&language=en&image=1`
         );
         res.send(science_data.data);
       } catch (error) {
@@ -37,7 +37,7 @@ exports.science = async(req, res) =>{
 exports.sports = async(req, res) =>{
     try {
         const sports_data = await axios.get(
-          `https://newsdata.io/api/1/news?apikey=pub_30957d309d53a07c8d8685bf3e63c02bed4a2&category=sports&language=en&image=1`
+          `https://newsdata.io/api/1/news?apikey=${apikey}&category=sports&language=en&image=1`
         );
         res.send(sports_data.data);
       } catch (error) {
@@ -48,7 +48,7 @@ exports.search = async(req, res) =>{
   const { search } = req.body;
     try {
         const search_data = await axios.get(
-          `https://newsdata.io/api/1/news?apikey=pub_30957d309d53a07c8d8685bf3e63c02bed4a2&qInTitle=${search}&language=en&image=1`
+          `https://newsdata.io/api/1/news?apikey=${apikey}&qInTitle=${search}&language=en&image=1`
         );
         res.send(search_data.data);
       } catch (error) {
