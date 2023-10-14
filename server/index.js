@@ -12,7 +12,7 @@ const route = require('./routes/routes')
 
 
 
-app.use(cors({origin: "http://localhost:3000"}));
+app.use(cors({origin: "http://news.boltluna.io"}));
 app.use(express.json());
 
 
