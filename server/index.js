@@ -12,7 +12,7 @@ const route = require('./routes/routes')
 
 
 
-app.use(cors({ credentials: true, origin: "*"}));
+app.use(cors({ credentials: true, origin: "https://news-search-app.onrender.com"}));
 app.use(express.json());
 
 
