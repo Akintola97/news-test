@@ -45,8 +45,6 @@ const HeadlineNav = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Delay the API call by 5 seconds
-
         const businessData = await axios.get(`${backendUrl}/headline/business`);
         setBusinessInfo(businessData.data.results);
       } catch (error) {

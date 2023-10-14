@@ -11,19 +11,6 @@ const Hero = () => {
     fetchData();
   }, []);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const hero_data = await axios.get(`${backendUrl}/headline/hero`);
-  //     setHeroInfo(
-  //       hero_data.data?.articles[
-  //         Math.floor(Math.random() * hero_data.data.articles?.length - 1)
-  //       ]
-  //     );
-  //     console.log(hero_data.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   const fetchData = async () => {
     try {
       const hero_data = await axios.get(`${backendUrl}/headline/hero`);
